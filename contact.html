@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bablu Kumar">
+    <meta name="keywords" content="Bablu Kumar, Web Developer, ASP.NET Developer, Portfolio">
+
+    <title>Contact | Bablu Kumar</title>
+    <meta name="description" content="Contact Bablu Kumar – Web Developer & Content Creator.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #0f0f0f;
+            color: #ffffff;
+        }
+
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: #111;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ff4444;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #ff4444;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 70px 20px;
+            background: linear-gradient(to right, #1a1a1a, #000);
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        /* INFO */
+        .contact-info h2 {
+            color: #ff4444;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        .contact-info p {
+            color: #ccc;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .info-item span {
+            color: #ff4444;
+            font-weight: bold;
+        }
+
+        /* FORM */
+        form {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        form h3 {
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            background: #111;
+            color: #fff;
+        }
+
+        textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 30px;
+            background: #ff4444;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        /* SOCIALS */
+        .socials {
+            margin-top: 25px;
+        }
+
+        .socials a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .socials a:hover {
+            color: #ff4444;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: #777;
+            background: #000;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .contact {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Bablu Unfiltered</div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Contact Me</h1>
+        <p>Let’s talk, collaborate or just say hello 👋</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+
+        <!-- INFO -->
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>
+                I’m open to opportunities, collaborations and meaningful conversations.
+                Feel free to reach out anytime.
+            </p>
+
+            <div class="info-item">
+                <span>Email:</span> bablu.kumar7879626@gmail.com
+            </div>
+
+            <div class="info-item">
+                <span>Location:</span> India
+            </div>
+
+            <div class="socials">
+                <a href="https://www.youtube.com/@babluunfilteredpath" target="_blank">YouTube</a>
+                <a href="https://www.linkedin.com/in/bablu-kumar-a33166221/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/bablu733" target="_blank">GitHub</a>
+                <!-- <a href="https://linktr.ee/babluunfiltered" target="_blank">Linktree</a> -->
+            </div>
+        </div>
+
+        <!-- FORM -->
+        <form>
+            <h3>Send a Message</h3>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Bablu Kumar | Bablu Unfiltered
+    </footer>
+
+</body>
+
+</html>

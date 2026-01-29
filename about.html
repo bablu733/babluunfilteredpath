@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bablu Kumar">
+    <meta name="keywords" content="Bablu Kumar, Web Developer, ASP.NET Developer, Portfolio">
+
+
+    <title>About Me | Bablu Kumar</title>
+    <meta name="description"
+        content="About Bablu Kumar – Real life journey, engineering to developer & content creator.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #0f0f0f;
+            color: #ffffff;
+            line-height: 1.7;
+        }
+
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: #111;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ff4444;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #ff4444;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 70px 20px;
+            background: linear-gradient(to right, #1a1a1a, #000);
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            max-width: 1200px;
+            margin: auto;
+            padding: 70px 40px;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .about-content h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #ff4444;
+        }
+
+        .about-content p {
+            color: #ccc;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        /* VIDEO */
+        .journey-video {
+            margin-top: 25px;
+        }
+
+        .journey-video h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 15px;
+            background: #000;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 40px;
+        }
+
+        .timeline h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            border-left: 5px solid #ff4444;
+            padding-left: 15px;
+        }
+
+        .timeline-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 2px solid #333;
+        }
+
+        .timeline-item span {
+            color: #ff4444;
+            font-size: 13px;
+        }
+
+        .timeline-item p {
+            color: #ccc;
+            font-size: 15px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: #777;
+            background: #000;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .about {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Bablu Unfiltered</div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>About Me</h1>
+        <p>
+            Not a perfect story — just a real one.
+            From engineering confusion to building skills, projects & documenting life.
+        </p>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <!-- PHOTO -->
+        <img src="assets/thumbnails/Photo.png" alt="Bablu Kumar">
+
+        <!-- CONTENT -->
+        <div class="about-content">
+            <h2>My Journey</h2>
+
+            <p>
+                I’m Bablu Kumar — a web developer and content creator who believes
+                in learning by doing. Engineering taught me theory, life taught me reality.
+            </p>
+
+            <p>
+                I started documenting my journey — the struggles, the Google searches,
+                the late-night learning, and the small wins that matter.
+            </p>
+
+            <!-- VIDEO -->
+            <div class="journey-video">
+                <h3>🎥 Journey Video</h3>
+
+                <div
+                    style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
+                    <iframe src="https://www.youtube.com/embed/SKIjxBu216Q" title="Bablu Journey" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen style="position: absolute; top:0; left:0; width:100%; height:100%;">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="timeline">
+        <h2>Quick Timeline</h2>
+
+        <div class="timeline-item">
+            <span>2023</span>
+            <p>Completed B.Tech in Computer Science & Engineering.</p>
+        </div>
+
+        <div class="timeline-item">
+            <span>2024</span>
+            <p>Started focusing on real-world development & self-learning.</p>
+        </div>
+
+        <div class="timeline-item">
+            <span>2025</span>
+            <p>Built APIs, projects & began documenting life on YouTube.</p>
+        </div>
+
+        <div class="timeline-item">
+            <span>2026</span>
+            <p>Growing as a developer, creator & learner — unfiltered.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Bablu Kumar | Bablu Unfiltered
+    </footer>
+
+</body>
+
+</html>
