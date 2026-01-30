@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -7,161 +7,12 @@
     <meta name="author" content="Bablu Kumar">
     <meta name="keywords" content="Bablu Kumar, Web Developer, ASP.NET Developer, Portfolio">
 
-
     <title>Portfolio | Bablu Kumar</title>
     <meta name="description"
         content="Bablu Kumar Portfolio – Web Developer, ASP.NET Developer, Real Projects and Journey.">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        body {
-            background: #0f0f0f;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        /* NAVBAR */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 40px;
-            background: #111;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: #ff4444;
-        }
-
-        nav a {
-            color: #fff;
-            margin-left: 20px;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-        nav a:hover {
-            color: #ff4444;
-        }
-
-        /* HERO */
-        .hero {
-            padding: 60px 20px;
-            text-align: center;
-            background: linear-gradient(to right, #1a1a1a, #000);
-        }
-
-        .hero h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            color: #ccc;
-        }
-
-        /* SECTION */
-        .section {
-            padding: 60px 40px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .section h2 {
-            font-size: 28px;
-            margin-bottom: 30px;
-            border-left: 5px solid #ff4444;
-            padding-left: 15px;
-        }
-
-        /* SKILLS */
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .skill {
-            padding: 10px 20px;
-            background: #1c1c1c;
-            border-radius: 30px;
-            font-size: 14px;
-        }
-
-        /* PROJECTS */
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .project-card {
-            background: #1a1a1a;
-            padding: 20px;
-            border-radius: 12px;
-            transition: transform 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-card h3 {
-            color: #ff4444;
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
-            font-size: 14px;
-            color: #ccc;
-        }
-
-        .project-card span {
-            display: inline-block;
-            margin-top: 10px;
-            font-size: 12px;
-            color: #999;
-        }
-
-        /* CTA */
-        .cta {
-            text-align: center;
-            padding: 60px 20px;
-            background: #111;
-        }
-
-        .cta a {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #ff4444;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 30px;
-            margin-top: 15px;
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 13px;
-            color: #777;
-            background: #000;
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -169,11 +20,19 @@
     <!-- NAVBAR -->
     <nav>
         <div class="logo">Bablu Unfiltered</div>
-        <div>
-            <a href="index.html">Home</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+        <div class="nav-right">
+            <!-- DARK MODE TOGGLE BUTTON -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                <span class="moon">🌙</span>
+                <span class="sun">☀️</span>
+            </button>
+            
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </div>
     </nav>
 
@@ -238,14 +97,23 @@
     <!-- CTA -->
     <section class="cta">
         <h2>Want to Work Together?</h2>
-        <p>Let’s build something real & meaningful.</p>
+        <p>Let's build something real & meaningful.</p>
         <a href="contact.html">Contact Me</a>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-        © 2026 Bablu Kumar | Bablu Unfiltered
+   <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Bablu Unfiltered</p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@babluunfilteredpath" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/bablu.unfilteredpath/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/BabluUnfilt" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
     </footer>
+
+    <script src="JS/main.js"></script>
 
 </body>
 

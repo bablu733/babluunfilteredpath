@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -7,53 +7,92 @@
     <meta name="author" content="Bablu Kumar">
     <meta name="keywords" content="Bablu Kumar, Web Developer, ASP.NET Developer, Portfolio">
 
-
     <title>Bablu Unfiltered – Real Life Journey</title>
     <meta name="description"
         content="Bablu Unfiltered – Real life journey, engineering to career, daily vlogs and developer life.">
     <meta name="robots" content="index, follow">
 
     <link rel="stylesheet" href="CSS/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
     <!-- NAVBAR -->
-  <header>
-  <nav class="navbar">
-    <div class="logo">Bablu Unfiltered</div>
-    <ul class="nav-links">
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="https://youtu.be/vnf9vL4IVv8" target="_blank" class="cta-btn">Videos</a></li>
-    </ul>
-    <div class="hamburger">&#9776;</div>
-  </nav>
-</header>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Bablu Unfiltered</div>
+
+            <div class="nav-right">
+                <!-- Dark Mode Toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://youtu.be/vnf9vL4IVv8" target="_blank" class="cta-btn">Videos</a></li>
+                </ul>
+
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
 
 
     <!-- LATEST VIDEOS -->
     <section id="videos" class="section">
-    <h2>Latest Videos</h2>
-    <div class="video-grid">
+        <h2>Latest Videos</h2>
+        <div class="video-grid">
 
-        <!-- Video 1 -->
-        <a href="https://youtu.be/vnf9vL4IVv8" target="_blank" rel="noopener noreferrer" class="video-card">
-            <img src="assets/thumbnails/Thumbnail1.png" alt="Video 1 Thumbnail">
-        </a>
+            <!-- Video 1 -->
+            <a href="https://youtu.be/vnf9vL4IVv8" target="_blank" rel="noopener noreferrer" class="video-card">
+                <div class="thumbnail-container">
+                    <img src="assets/thumbnails/Thumbnail1.png" alt="Video 1 Thumbnail">
+                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="video-info">
+                    <h3>Office Talk: BF vs Crush Q&A 😳</h3>
+                    <p>Unfiltered office conversations - from bad boys debate to Bangalore weather struggles. Real talk,
+                        no script!</p>
+                </div>
+            </a>
 
-          <a href="https://youtu.be/yQ66fm92mi0" target="_blank" rel="noopener noreferrer" class="video-card">
-            <img src="assets/thumbnails/Thumbnail3.png" alt="Video 1 Thumbnail">
-        </a>
+            <a href="https://youtu.be/yQ66fm92mi0" target="_blank" rel="noopener noreferrer" class="video-card">
+                <div class="thumbnail-container">
+                    <img src="assets/thumbnails/Thumbnail3.png" alt="Video 2 Thumbnail">
+                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="video-info">
+                    <h3>Phoenix Mall of Asia Bangalore 😳 | Worth The Hype?</h3>
+                    <p>Asia's biggest mall in Bangalore? Reality check on crowds, luxury brands, parking chaos & is it
+                        actually worth visiting!</p>
+                </div>
+            </a>
 
-        <!-- Video 2 -->
-        <a href="https://youtu.be/yQ66fm92mi0" target="_blank" rel="noopener noreferrer" class="video-card">
-            <img src="assets/thumbnails/Thumbnail2.png" alt="Video 2 Thumbnail">
-        </a>
+            <!-- Video 2 -->
+            <a href="https://youtu.be/yQ66fm92mi0" target="_blank" rel="noopener noreferrer" class="video-card">
+                <div class="thumbnail-container">
+                    <img src="assets/thumbnails/Thumbnail2.png" alt="Video 3 Thumbnail">
+                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="video-info">
+                    <h3>Chhutti Sabki Nahi Hoti | Aaj Ka Real City Vlog 🚦🌿</h3>
+                    <p>Bina plan ke nikle, traffic ne poori reality dikha di. Garden chill vs office hustle - asli
+                        sheheri life! 🚦🌿</p>
+                </div>
+            </a>
 
-    </div>
-</section>
+        </div>
+    </section>
 
 
     <!-- UPCOMING -->
@@ -61,24 +100,41 @@
         <h2>Upcoming Videos</h2>
         <div class="video-grid">
             <div class="video-card upcoming">
-                <img src="assets/thumbnails/Banglore Traffic.png" alt="Upcoming Video Thumbnail">
-                <span>Coming Soon</span>
+                <div class="thumbnail-container">
+                    <img src="assets/thumbnails/Banglore Traffic.png" alt="Upcoming Video Thumbnail">
+                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                </div>
+                <span class="coming-soon-badge">Coming Soon</span>
+                <div class="video-info">
+                    <h3>Bangalore Traffic Stories</h3>
+                    <p>Stay tuned for this epic vlog!</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- LINKS -->
     <section id="links" class="section center">
-        <a href="https://linktr.ee/babluunfiltered" target="_blank" rel="noopener noreferrer" class="btn">Visit
-            Linktree</a>
+        <a href="https://linktr.ee/babluunfilteredpath" target="_blank" rel="noopener noreferrer" class="btn">
+            <i class="fas fa-link"></i> Visit Linktree
+        </a>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        © 2026 Bablu Unfiltered
+        <div class="footer-content">
+            <p>&copy; 2026 Bablu Unfiltered</p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@babluunfilteredpath" aria-label="YouTube"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/bablu.unfilteredpath/" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://x.com/BabluUnfilt" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
     </footer>
 
-    <script src="JS/Slider.js"></script>
+    <script src="JS/main.js"></script>
 </body>
 
 </html>
