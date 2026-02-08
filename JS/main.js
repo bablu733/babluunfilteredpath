@@ -132,6 +132,50 @@ if (contactForm) {
     }
 }
 
+// ================= UPCOMING VIDEO - COMING SOON LOGIC =================
+document.addEventListener('DOMContentLoaded', () => {
+    const upcomingCards = document.querySelectorAll('.video-card.upcoming');
+
+    upcomingCards.forEach(card => {
+        const playIcon = card.querySelector('.play-icon');
+
+        // Disable click
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            showComingSoonToast();
+        });
+
+        // Small hover animation
+        card.addEventListener('mouseenter', () => {
+            card.classList.add('pulse');
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.classList.remove('pulse');
+        });
+    });
+
+    // Toast message function
+    function showComingSoonToast() {
+        let toast = document.getElementById('comingSoonToast');
+
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'comingSoonToast';
+            toast.innerText = '🚀 Video coming soon! Stay tuned...';
+            document.body.appendChild(toast);
+        }
+
+        toast.classList.add('show');
+
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 2500);
+    }
+});
+
+
 // ================= HERO SLIDER (OPTIONAL) =================
 const slides = document.querySelectorAll('.slide');
 const sliderContainer = document.querySelector('.hero-slider');

@@ -427,6 +427,66 @@ footer p {
     font-weight: bold;
 }
 
+/* =====================================================
+   UPCOMING VIDEOS – FINAL CSS
+   Paste this at the VERY END of your CSS file
+   ===================================================== */
+
+#upcoming {
+    margin-top: 80px;
+}
+
+/* Upcoming video card style */
+#upcoming .video-card {
+    cursor: default;
+    border: 2px dashed var(--accent-color);
+    background: var(--bg-card);
+    box-shadow: 0 12px 35px var(--shadow);
+}
+
+/* Disable hover jump for upcoming */
+#upcoming .video-card:hover {
+    transform: none;
+    box-shadow: 0 14px 40px var(--shadow);
+}
+
+/* Thumbnail darker cinematic look */
+#upcoming .thumbnail-container img {
+    filter: brightness(0.82) contrast(1.05);
+}
+
+/* Play icon – muted (video not live yet) */
+#upcoming .play-icon {
+    background: rgba(0, 0, 0, 0.65);
+    opacity: 1;
+}
+
+/* Coming Soon badge – strong & visible */
+#upcoming .coming-soon-badge {
+    background: linear-gradient(45deg, #ff004f, #ff4500);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+}
+
+/* Title styling */
+#upcoming .video-info h3 {
+    color: var(--text-primary);
+    font-size: 18px;
+}
+
+/* Subtitle / description */
+#upcoming .video-info p {
+    color: var(--text-muted);
+    font-size: 14px;
+    font-style: italic;
+}
+
+
+
 /* ================= PORTFOLIO PAGE ================= */
 .skills {
     display: flex;
