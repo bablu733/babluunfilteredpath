@@ -53,10 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         links.forEach(function(link) {
             // Click handler for desktop/mobile
             link.addEventListener('click', function(e) {
-                // Allow default navigation (don't prevent it!)
                 console.log('Navigating to:', this.href);
-                
-                // Close menu after a small delay to ensure navigation starts
                 setTimeout(function() {
                     hamburger.classList.remove('active');
                     navLinks.classList.remove('active');
@@ -65,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Touch handler specifically for mobile
             link.addEventListener('touchend', function(e) {
-                // Don't prevent default - let touch work naturally
                 setTimeout(function() {
                     hamburger.classList.remove('active');
                     navLinks.classList.remove('active');
@@ -94,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
 // ================= CONTACT FORM (SAFE CHECK) =================
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    // Check if form uses mailto (no action attribute or action is #)
     const isMailtoForm = !contactForm.action || contactForm.action.includes(window.location.href);
     
     if (isMailtoForm) {
@@ -111,14 +106,11 @@ if (contactForm) {
                 return;
             }
 
-            // Mailto link structure
             const subject = `Message from ${name} via Portfolio Website`;
             const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
 
-            // Open email client
             window.location.href = `mailto:bablu.kumar7879626@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-            // Show success message if exists
             if (successDiv) {
                 successDiv.style.display = 'block';
                 setTimeout(() => {
@@ -126,7 +118,6 @@ if (contactForm) {
                 }, 5000);
             }
 
-            // Reset form
             this.reset();
         });
     }
@@ -139,14 +130,12 @@ document.addEventListener('DOMContentLoaded', () => {
     upcomingCards.forEach(card => {
         const playIcon = card.querySelector('.play-icon');
 
-        // Disable click
         card.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
             showComingSoonToast();
         });
 
-        // Small hover animation
         card.addEventListener('mouseenter', () => {
             card.classList.add('pulse');
         });
@@ -156,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Toast message function
     function showComingSoonToast() {
         let toast = document.getElementById('comingSoonToast');
 
@@ -174,7 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2500);
     }
 });
-
 
 // ================= HERO SLIDER (OPTIONAL) =================
 const slides = document.querySelectorAll('.slide');
@@ -196,17 +183,14 @@ if (slides.length > 0 && sliderContainer) {
         showSlide((currentSlide + 1) % slides.length);
     }
 
-    // Initialize
     showSlide(0);
     autoSlide = setInterval(nextSlide, slideInterval);
 
-    // Pause on hover
     sliderContainer.addEventListener('mouseenter', () => clearInterval(autoSlide));
     sliderContainer.addEventListener('mouseleave', () => {
         autoSlide = setInterval(nextSlide, slideInterval);
     });
 
-    // Button controls (if exist)
     const nextBtn = document.querySelector('.next');
     const prevBtn = document.querySelector('.prev');
 
@@ -229,3 +213,27 @@ if (slides.length > 0 && sliderContainer) {
         autoSlide = setInterval(nextSlide, slideInterval);
     }
 }
+
+// ================= VIDEO LIVE MARQUEE AUTO UPDATE =================
+document.addEventListener('DOMContentLoaded', () => {
+    const marquee = document.getElementById('live-marquee');
+    if (!marquee) return;
+
+    // Set your video live date/time
+    const videoLiveDate = new Date('2026-02-15T20:00:00'); // 8:00 PM
+
+    function updateMarqueeMessage() {
+        const now = new Date();
+        if (now >= videoLiveDate) {
+            marquee.innerHTML = `🔴 VIDEO LIVE NOW! — 
+                3 Biggest Mistakes Every Content Creator Makes | Honest Journey — 
+                <a href="https://youtu.be/IZXKvafbFIk" target="_blank">Watch on YouTube ▶</a>`;
+        }
+    }
+
+    // Initial check
+    updateMarqueeMessage();
+
+    // Check every 10 seconds
+    setInterval(updateMarqueeMessage, 10000);
+});
