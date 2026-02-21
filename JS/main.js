@@ -33,15 +33,15 @@ if (themeToggle) {
 }
 
 // ================= MOBILE MENU (100% WORKING FINISHED VERSION) =================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks') || 
-                     document.querySelector('.nav-links') || 
-                     document.querySelector('.nav-links-simple');
+    const navLinks = document.getElementById('navLinks') ||
+        document.querySelector('.nav-links') ||
+        document.querySelector('.nav-links-simple');
 
     if (hamburger && navLinks) {
         // Toggle menu on hamburger click
-        hamburger.addEventListener('click', function(e) {
+        hamburger.addEventListener('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
             this.classList.toggle('active');
@@ -50,19 +50,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Handle link clicks - IMPORTANT FIX
         const links = navLinks.querySelectorAll('a');
-        links.forEach(function(link) {
+        links.forEach(function (link) {
             // Click handler for desktop/mobile
-            link.addEventListener('click', function(e) {
+            link.addEventListener('click', function (e) {
                 console.log('Navigating to:', this.href);
-                setTimeout(function() {
+                setTimeout(function () {
                     hamburger.classList.remove('active');
                     navLinks.classList.remove('active');
                 }, 50);
             });
-            
+
             // Touch handler specifically for mobile
-            link.addEventListener('touchend', function(e) {
-                setTimeout(function() {
+            link.addEventListener('touchend', function (e) {
+                setTimeout(function () {
                     hamburger.classList.remove('active');
                     navLinks.classList.remove('active');
                 }, 50);
@@ -70,15 +70,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', function (e) {
             if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
             }
         });
-        
+
         // Handle touch outside (for mobile)
-        document.addEventListener('touchstart', function(e) {
+        document.addEventListener('touchstart', function (e) {
             if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     const isMailtoForm = !contactForm.action || contactForm.action.includes(window.location.href);
-    
+
     if (isMailtoForm) {
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
@@ -225,9 +225,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateMarqueeMessage() {
         const now = new Date();
         if (now >= videoLiveDate) {
-            marquee.innerHTML = `🔴 VIDEO LIVE NOW! — 
-                3 Biggest Mistakes Every Content Creator Makes | Honest Journey — 
-                <a href="https://youtu.be/IZXKvafbFIk" target="_blank">Watch on YouTube ▶</a>`;
+            marquee.innerHTML = `🔴 SATURDAY NIGHT VLOG LIVE NOW! — 
+        Bangalore After 10:30 PM | MG Road & Koramangala Night Vibes 🔥 — 
+        <a href="https://youtu.be/vtmGZ1hIIWU" target="_blank">Watch on YouTube ▶</a>`;
         }
     }
 
