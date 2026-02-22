@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (now >= videoLiveDate) {
             marquee.innerHTML = `🔴 SATURDAY NIGHT VLOG LIVE NOW! — 
         Bangalore After 10:30 PM | MG Road & Koramangala Night Vibes 🔥 — 
-        <a href="https://youtu.be/vtmGZ1hIIWU" target="_blank">Watch on YouTube ▶</a>`;
+        <a href="https://youtu.be/pxvxhn3q8X8" target="_blank">Watch on YouTube ▶</a>`;
         }
     }
 
