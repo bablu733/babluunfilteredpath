@@ -220,16 +220,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!marquee) return;
 
     // Set your video live date/time
-    const videoLiveDate = new Date('2026-02-15T20:00:00'); // 8:00 PM
-
+const videoLiveDate = new Date('2026-02-15T07:30:00'); // 7:30 AM
     function updateMarqueeMessage() {
         const now = new Date();
         if (now >= videoLiveDate) {
-            marquee.innerHTML = `🔴 SATURDAY NIGHT VLOG LIVE NOW! — 
-        Bangalore After 10:30 PM | MG Road & Koramangala Night Vibes 🔥 — 
-        <a href="https://youtu.be/pxvxhn3q8X8" target="_blank">Watch on YouTube ▶</a>`;
+            marquee.innerHTML = `🔴 SUNDAY WEEK OFF VLOG LIVE NOW! — 
+            Chicken Cooking & Rooftop Sunset Moments 🌇🔥 — 
+            <a href="https://youtu.be/kUPcrsqMtGg" target="_blank">Watch on YouTube ▶</a>`;
         }
     }
+
 
     // Initial check
     updateMarqueeMessage();
